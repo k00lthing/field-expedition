@@ -1,0 +1,28 @@
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(232, 232, 232, 0.7);
+	z-index: 99999999999999!important;
+	padding: 1rem;
+
+}
+
+#close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	background: transparent;
+	color: black;
+	cursor: pointer;
+	border: none;
+}
+
+#analysis{
+	font-size: calc(1rem + 1vw);
+	color: crimson;
+	font-weight: bold;
+}

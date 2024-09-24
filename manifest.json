@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "Field Expedition",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content.js"
+			],
+			"css": ["overlay.css"]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_icon": "img/icon-128.png",
+		"default_title": "Start expedition"
+	},
+	"permissions": [
+		"tabs",
+		"scripting"
+	]
+}
