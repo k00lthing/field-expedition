@@ -29,7 +29,7 @@ function gotMessage(message, sender, sendResponse) {
     tooltipContent.style.position = 'absolute';
     tooltipContent.style.backgroundColor = 'transparent';
     tooltipContent.style.color = 'red';
-    tooltipContentstyle.fontSize = '.5rem';
+    tooltipContent.style.fontSize = '.5rem';
     document.body.appendChild(tooltipContent);
 
     function updateTooltip() {
