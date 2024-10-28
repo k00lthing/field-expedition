@@ -2,6 +2,7 @@
 	"manifest_version": 3,
 	"name": "Field Expedition",
 	"version": "1.3",
+	"description": "Experience webpage as an unexplored terrain, reveal the elements by finding their center.",
 	"icons": {
 		"16": "images/icon-16.png",
 		"32": "images/icon-32.png",

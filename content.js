@@ -1,4 +1,4 @@
-console.log("Hello from content.js");
+// console.log("Hello from content.js");
 
 // Receive message from the background script
 chrome.runtime.onMessage.addListener(gotMessage);
@@ -33,6 +33,8 @@ function gotMessage(message) {
     tooltipContent.style.padding = '5px';
     tooltipContent.style.fontSize = '12px';
     tooltipContent.style.borderRadius = '5px';
+    tooltipContent.style.zIndex = '99999999999999';
+    tooltipContent.style.lineHeight = '1.1';
     document.body.appendChild(tooltipContent);
 
     var elements = [];
@@ -52,7 +54,7 @@ function gotMessage(message) {
       elements.forEach(element => {
         distance = calculateDistance(element, mouseX, mouseY);
 
-        console.log(`element: ${element.tagName}, distance: ${distance}`);
+        // console.log(`element: ${element.tagName}, distance: ${distance}`);
 
         const maxBlur = 10;
         const minBlur = 0;
@@ -71,7 +73,7 @@ function gotMessage(message) {
       });
 
     }
-  }
+  
 
 
   function updateTooltip() {
@@ -82,6 +84,7 @@ function gotMessage(message) {
     tooltipContent.innerHTML = `Field area: ${document.body.scrollWidth}px ✕ ${document.body.scrollHeight}px<br> Current X: ${mouseX}px, Y: ${mouseY}px.`;
     requestAnimationFrame(updateTooltip);
   }
+}
 
   requestAnimationFrame(updateTooltip);
 }
